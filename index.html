@@ -46,10 +46,24 @@
   </style>
 </head>
 <body>
-  <img class="logo" src="mathca-logo.png" alt="MathCA Logo">
+  <img class="logo" src="mathca-logo.riv" alt="MathCA Logo">
   <h1>MathCA</h1>
   <p>Bringing Math Education to Your Fingertips!</p>
   <p>Get ready to explore a world of mathematical possibilities with MathCA. Our app is coming soon!</p>
-  <a class="cta-button" href="mailto:info@mathca.app">Stay Updated</a>
 </body>
+
+     <!-- * * * * * * * * * * * *  RIVE * * * * * * * * * * * * * * *-->
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.98"></script>
+    <script>
+        new rive.Rive({
+            src: "/mathca-logo.riv",
+            canvas: document.getElementById("mathca-logo-animation"),
+            autoplay: true,
+            layout: new rive.Layout({
+                fit: rive.Fit.FitWidth,
+                alignment: rive.Alignment.TopCenter,
+            }),
+        });
+
+    </script>
 </html>
