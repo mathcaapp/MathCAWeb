@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets/files/privacypolicy-en.md
+Disallow: /assets/files/privacypolicy-es.md
+Disallow: /assets/files/tos-en.md
+Disallow: /assets/files/tos-es.md
