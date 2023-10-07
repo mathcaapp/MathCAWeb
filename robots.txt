@@ -3,3 +3,15 @@ Disallow: /assets/files/privacypolicy-en.md
 Disallow: /assets/files/privacypolicy-es.md
 Disallow: /assets/files/tos-en.md
 Disallow: /assets/files/tos-es.md
+Disallow: index-iPad.html
+Disallow: index-iPhone.html
+Disallow: index-macos.html
+Disallow: index-material-phone.html
+Disallow: index-material-tablet.html
+Disallow: index-windows.html
+Disallow: es/index-iPad.html	
+Disallow: es/index-iPhone.html
+Disallow: es/index-macos.html
+Disallow: es/index-material-phone.html
+Disallow: es/index-material-tablet.html
+Disallow: es/index-windows.html
