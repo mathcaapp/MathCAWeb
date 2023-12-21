@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Viewer</title>
+    <title>Mathca - Privacy policy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,19 +16,37 @@
 </head>
 
 <body>
+
+    <select id="language-switch">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+    </select>
+
     <div id="markdown-content"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
     <script>
-        // Fetch and convert the Markdown content
-        fetch('assets/files/privacypolicy-en.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const converter = new showdown.Converter();
-                const html = converter.makeHtml(markdown);
-                document.getElementById('markdown-content').innerHTML = html;
-            })
-            .catch(error => console.error('Error fetching Markdown:', error));
+        const languageSwitch = document.getElementById('language-switch');
+
+        function loadMarkdown(language) {
+            // Fetch and convert the Markdown content
+            fetch(`assets/files/privacypolicy-${language}.md`)
+                .then(response => response.text())
+                .then(markdown => {
+                    const converter = new showdown.Converter();
+                    const html = converter.makeHtml(markdown);
+                    document.getElementById('markdown-content').innerHTML = html;
+                });
+        }
+
+        // Load markdown for the initial language
+        loadMarkdown(languageSwitch.value);
+
+        // Update markdown when the selected language changes
+        languageSwitch.addEventListener('change', () => {
+            loadMarkdown(languageSwitch.value);
+        });
     </script>
 </body>
 
