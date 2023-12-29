@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathca - Data deletion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <select id="language-switch">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+    </select>
+
+    <div id="markdown-content"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        const languageSwitch = document.getElementById('language-switch');
+
+        function loadMarkdown(language) {
+            // Fetch and convert the Markdown content
+            fetch(`assets/files/data-deletion/instructions-${language}.md`)
+                .then(response => response.text())
+                .then(markdown => {
+                    const converter = new showdown.Converter();
+                    const html = converter.makeHtml(markdown);
+                    document.getElementById('markdown-content').innerHTML = html;
+                });
+        }
+
+        // Load markdown for the initial language
+        loadMarkdown(languageSwitch.value);
+
+        // Update markdown when the selected language changes
+        languageSwitch.addEventListener('change', () => {
+            loadMarkdown(languageSwitch.value);
+        });
+    </script>
+</body>
+
+</html>
