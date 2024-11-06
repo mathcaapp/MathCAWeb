@@ -1,4 +1,5 @@
-2023/08/28
+2023-08-28
+
 **MathCA - TERMS AND CONDITIONS**
 
 **Last updated** **September 20, 2023**
