@@ -1,4 +1,5 @@
-2023/08/28
+2023-08-28
+
 # Política de Privacidad
 
 Esta Política de Privacidad explica cómo manejamos tu información cuando utilizas MathCA y te informa sobre tus derechos de privacidad y protecciones legales. Al usar MathCA, aceptas los términos establecidos en esta Política de Privacidad.
